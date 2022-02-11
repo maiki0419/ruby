@@ -37,8 +37,40 @@ def f(num)
   range1.include?(num)
 end
 
-def g
-  
+def g(num)
+  a,*b = num
+  puts a
+  puts b
+
 end
 
-puts f(5)
+def h(a)
+  a.split('/').map{|n| n+"プログラミング言語"}
+end
+
+def i
+  array = ["apple","orange","melon"]
+  array.map.with_index(1){|f, n| n.to_s + ": " + f}
+end
+
+def j(num)
+  array = [1,"松田",3,4,5,6]
+  array.delete(num){'ng'}
+end
+
+
+
+
+def k
+  text = "私の誕生日は1997年4月19日です"
+  m = text.match(/(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日/)
+  puts m[:year]
+end
+
+def l
+  text = "私,の誕生日,は1---997,年4月1////9日です"
+  puts text.gsub(/,|-|\//,'@')
+end
+ 
+
+l()
