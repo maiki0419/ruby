@@ -71,6 +71,16 @@ def l
   text = "私,の誕生日,は1---997,年4月1////9日です"
   puts text.gsub(/,|-|\//,'@')
 end
- 
 
-l()
+def m
+  users = []
+  users << {first_name: "alice",last_name: "ruby", age: "20"}
+  users << {first_name: "bob", last_name: "python", age: "30"}
+  
+  users.each do |user|
+    puts user[:first_name]
+  end
+end
+
+
+m()
