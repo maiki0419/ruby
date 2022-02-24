@@ -76,11 +76,32 @@ def m
   users = []
   users << {first_name: "alice",last_name: "ruby", age: "20"}
   users << {first_name: "bob", last_name: "python", age: "30"}
-  
+
   users.each do |user|
     puts user[:first_name]
   end
 end
 
 
-m()
+class Product
+  attr_reader :code, :name
+
+  def initialize(code, name)
+    @code = code
+    @name = name
+  end
+
+
+
+
+end
+
+
+
+a = Product.new('a-001','a greate movie')
+b = Product.new('a-001','a greate movie')
+if a.code == b.code
+  puts 'true'
+else
+  puts 'false'
+end
